@@ -1,0 +1,45 @@
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\bin\Debug\Literary publishing.exe.config
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\bin\Debug\Literary publishing.exe
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\bin\Debug\Literary publishing.pdb
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary publishing.csprojAssemblyReference.cache
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.load.resources
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.Properties.Resources.resources
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary publishing.csproj.GenerateResource.cache
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary publishing.csproj.CoreCompileInputs.cache
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary publishing.exe
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary publishing.pdb
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.Authorization_user.resources
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.Registration_user.resources
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.Form1.resources
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\bin\Debug\Literary publishing.exe.config
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\bin\Debug\Literary publishing.exe
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\bin\Debug\Literary publishing.pdb
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary publishing.csproj.AssemblyReference.cache
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary publishing.csproj.SuggestedBindingRedirects.cache
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.Authorization_user.resources
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.Form1.resources
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.load.resources
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.Properties.Resources.resources
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.Registration_user.resources
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary publishing.csproj.GenerateResource.cache
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary publishing.csproj.CoreCompileInputs.cache
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary publishing.exe
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary publishing.pdb
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.NewEntry9.resources
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.NewEntry1.resources
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.NewEntry2.resources
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.NewEntry3.resources
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.NewEntry4.resources
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.NewEntry5.resources
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.NewEntry7.resources
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.NewEntry8.resources
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.NewEntry1.resources
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.NewEntry2.resources
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.NewEntry3.resources
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.NewEntry4.resources
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.NewEntry5.resources
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.NewEntry7.resources
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.NewEntry8.resources
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.NewEntry9.resources
+C:\Users\1290743\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.NewEntry6.resources
+\\main\RDP\33П\ЗлобиновРС\Desktop\Literary publishing\Literary publishing\Literary publishing\obj\Debug\Literary_publishing.NewEntry6.resources
