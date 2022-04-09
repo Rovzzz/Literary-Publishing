@@ -49,18 +49,28 @@ namespace Literary_publishing
         private void button2_save_Click(object sender, EventArgs e)
         {
             dataBase.openConnection();
-            var City = textBox7_Сity.Text;
+            var Сity = textBox7_Сity.Text;
             var District = textBox7_District.Text;
             var Street = textBox7_street.Text;
             var House = textBox7_house.Text;
-            var addquery = $"insert into Addresses (City,District,street,house) values ('{City}','{District}','{Street}','{House}')";
+            var addquery = $"insert into Addresses (Сity,District,street,house) values ('{Сity}','{District}','{Street}','{House}')";
             var command = new SqlCommand(addquery, dataBase.GetConnection());
             command.ExecuteNonQuery();
             MessageBox.Show("Запись успешно создана!", "Запись записана", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dataBase.closeConnection();
+
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
             Debug.Indent();
             Debug.WriteLine("Запись Сохранена - Адреса");
-        }
+            fileStream.WriteLine(DateTime.Now);
+            fileStream.WriteLine("Запись успешно создана - Адреса");
+            fileStream.Close();
+            }
+            }
+        
 
         private void button1_clear_Click(object sender, EventArgs e)
         {

@@ -43,18 +43,28 @@ namespace Literary_publishing
         {
             dataBase.openConnection();
             var Surname = textBox5_Surname.Text;
-            var Name = textBox5_Name;
+            var Name = textBox5_Name.Text;
             var Patronymic = textBox5_Patronymic.Text;
             var Phone_number = textBox5_Phone_number.Text;
-            var Mail = textBox5_Mail;
+            var Mail = textBox5_Mail.Text;
 
-            var addquery = $"insert into Infomation_about_the_autors (Surname,Name,Patronymic,Phone_number,Mail) values ('{Surname}','{Name}','{Patronymic}','{Phone_number}','{Mail}')";
-            var command = new SqlCommand(addquery, dataBase.GetConnection());
-            command.ExecuteNonQuery();
+                var addquery = $"insert into Information_about_the_authors (Surname,Name,Patronymic,Phone_number,Mail) values ('{Surname}','{Name}','{Patronymic}','{Phone_number}','{Mail}')";
+                var command = new SqlCommand(addquery, dataBase.GetConnection());
+                command.ExecuteNonQuery();
+            MessageBox.Show("Запись успешно создана!", "Запись записана", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             dataBase.closeConnection();
-            Debug.Indent();
-            Debug.WriteLine("Запись Сохранена - Сведения Об Авторах");
+
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                Debug.Indent();
+                Debug.WriteLine("Запись Сохранена - Сведения Об Авторах");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись успешно создана - Сведения Об Авторах");
+                fileStream.Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

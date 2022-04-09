@@ -42,39 +42,95 @@ namespace Literary_publishing
             var Order_completion_date = textBox1_Order_completion_date.Text;
             var The_cost_of_the_order = textBox1_The_cost_of_the_order.Text;
 
-            if (int.TryParse(textBox1_id_Accounting.Text, out id_Accounting) && int.TryParse(textBox1_id_Information_about_Customers.Text, out id_Information_about_Customers) && int.TryParse(textBox1_id_Type_of_printed_products.Text, out id_Type_of_printed_products) && int.TryParse(textBox1_id_Information_about_publications.Text, out id_Information_about_publications) && int.TryParse(textBox1_id_Information_about_printing_houses.Text, out id_Information_about_printing_houses))
-            {
-                var addquery = $"insert into Infomation_about_orders (id_Accounting,id_Information_about_Customers,id_Type_of_printed_products,id_Information_about_publications,id_Information_about_printing_houses,date_of_order_acceptance,Mark_of_completion,Order_completion_date,The_cost_of_the_order) values ('{id_Accounting}','{id_Information_about_Customers}','{id_Type_of_printed_products}','{id_Information_about_publications}','{id_Information_about_printing_houses}','{id_Information_about_printing_houses}','{date_of_order_acceptance}','{Mark_of_completion}','{Order_completion_date}','{The_cost_of_the_order}')";
-                var command = new SqlCommand(addquery, dataBase.GetConnection());
-                command.ExecuteNonQuery();
-                MessageBox.Show("Запись успешно создана!", "Запись записана", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (!int.TryParse(textBox1_id_Accounting.Text, out id_Accounting))
-            {
-                MessageBox.Show("Неправильно введены данные в (ID Бухгалтерский учёт)", "Ошибка НЕ числовой формат", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (!int.TryParse(textBox1_id_Information_about_Customers.Text, out id_Information_about_Customers))
-            {
-                MessageBox.Show("Неправильно введены данные в (ID Сведения О Заказчике)", "Ошибка НЕ числовой формат", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (!int.TryParse(textBox1_id_Type_of_printed_products.Text, out id_Type_of_printed_products))
-            {
-                MessageBox.Show("Неправильно введены данные в (ID Тип Печатной Продукции)", "Ошибка  НЕ числовой формат", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (!int.TryParse(textBox1_id_Information_about_publications.Text, out id_Information_about_publications))
-            {
-                MessageBox.Show("Неправильно введены данные в (ID Сведения О Издании)", "Ошибка  НЕ числовой формат", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (!int.TryParse(textBox1_id_Information_about_printing_houses.Text, out id_Information_about_printing_houses))
-            {
-                MessageBox.Show("Неправильно введены данные в (ID Свдения О Типографии)", "Ошибка  НЕ числовой формат", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
 
-            dataBase.closeConnection();
 
-            Debug.Indent();
-            Debug.WriteLine("Запись Сохранена - Сведения О Заказах");
+                if (int.TryParse(textBox1_id_Accounting.Text, out id_Accounting) && int.TryParse(textBox1_id_Information_about_Customers.Text, out id_Information_about_Customers) && int.TryParse(textBox1_id_Type_of_printed_products.Text, out id_Type_of_printed_products) && int.TryParse(textBox1_id_Information_about_publications.Text, out id_Information_about_publications) && int.TryParse(textBox1_id_Information_about_printing_houses.Text, out id_Information_about_printing_houses))
+                {
+                    var addquery = $"insert into Information_about_orders (id_Accounting,id_Information_about_Customers,id_Type_of_printed_products,id_Information_about_publications,id_Information_about_printing_houses,date_of_order_acceptance,Mark_of_completion,Order_completion_date,The_cost_of_the_order) values ('{id_Accounting}','{id_Information_about_Customers}','{id_Type_of_printed_products}','{id_Information_about_publications}','{id_Information_about_printing_houses}','{date_of_order_acceptance}','{Mark_of_completion}','{Order_completion_date}','{The_cost_of_the_order}')";
+                    var command = new SqlCommand(addquery, dataBase.GetConnection());
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Запись успешно создана!", "Запись записана", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+                string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+                using (StreamWriter fileStream = new StreamWriter(path, true))
+                {
+                    fileStream.WriteLine(DateTime.Now);
+                    fileStream.WriteLine("Запись успешно создана - Сведения О Заказах");
+                    fileStream.Close();
+                }
+                }
+                else if (!int.TryParse(textBox1_id_Accounting.Text, out id_Accounting))
+                {
+                    MessageBox.Show("Неправильно введены данные в (ID Бухгалтерский учёт)", "Ошибка НЕ числовой формат", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+                string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+                using (StreamWriter fileStream = new StreamWriter(path, true))
+                {
+                    fileStream.WriteLine(DateTime.Now);
+                    fileStream.WriteLine("Неправильно введены данные в (ID Бухгалтерский учёт) - Сведения О Заказах");
+                    fileStream.Close();
+                }
+                }
+                else if (!int.TryParse(textBox1_id_Information_about_Customers.Text, out id_Information_about_Customers))
+                {
+                    MessageBox.Show("Неправильно введены данные в (ID Сведения О Заказчике)", "Ошибка НЕ числовой формат", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+                string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+                using (StreamWriter fileStream = new StreamWriter(path, true))
+                {
+                    fileStream.WriteLine(DateTime.Now);
+                    fileStream.WriteLine("Неправильно введены данные в (ID Сведения О Заказчике) - Сведения О Заказах");
+                    fileStream.Close();
+                }
+                }
+                else if (!int.TryParse(textBox1_id_Type_of_printed_products.Text, out id_Type_of_printed_products))
+                {
+                    MessageBox.Show("Неправильно введены данные в (ID Тип Печатной Продукции)", "Ошибка  НЕ числовой формат", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+                string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+                using (StreamWriter fileStream = new StreamWriter(path, true))
+                {
+                    fileStream.WriteLine(DateTime.Now);
+                    fileStream.WriteLine("Неправильно введены данные в (ID Тип Печатной Продукции) - Сведения О Заказах");
+                    fileStream.Close();
+                }
+                }
+                else if (!int.TryParse(textBox1_id_Information_about_publications.Text, out id_Information_about_publications))
+                {
+                    MessageBox.Show("Неправильно введены данные в (ID Сведения О Издании)", "Ошибка  НЕ числовой формат", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+                string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+                using (StreamWriter fileStream = new StreamWriter(path, true))
+                {
+                    fileStream.WriteLine(DateTime.Now);
+                    fileStream.WriteLine("Неправильно введены данные в (ID Сведения О Издании) - Сведения О Заказах");
+                    fileStream.Close();
+                }
+                }
+                else if (!int.TryParse(textBox1_id_Information_about_printing_houses.Text, out id_Information_about_printing_houses))
+                {
+                    MessageBox.Show("Неправильно введены данные в (ID Свдения О Типографии)", "Ошибка  НЕ числовой формат", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+                string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+                using (StreamWriter fileStream = new StreamWriter(path, true))
+                {
+                    fileStream.WriteLine(DateTime.Now);
+                    fileStream.WriteLine("Неправильно введены данные в (ID Свдения О Типографии) - Сведения О Заказах");
+                    fileStream.Close();
+                }
+                }
+
+                dataBase.closeConnection();
+
+                Debug.Indent();
+                Debug.WriteLine("Запись Сохранена - Сведения О Заказах");
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

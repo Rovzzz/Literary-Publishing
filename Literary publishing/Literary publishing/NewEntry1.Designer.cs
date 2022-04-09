@@ -77,7 +77,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(108, 61);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(299, 64);
+            this.label3.Size = new System.Drawing.Size(300, 64);
             this.label3.TabIndex = 3;
             this.label3.Text = "Сведения О Заказах";
             // 
@@ -103,7 +103,7 @@
             this.label2.Location = new System.Drawing.Point(108, 9);
             this.label2.MaximumSize = new System.Drawing.Size(280, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(267, 64);
+            this.label2.Size = new System.Drawing.Size(268, 64);
             this.label2.TabIndex = 1;
             this.label2.Text = "Создание Записи:";
             // 
@@ -189,7 +189,7 @@
             this.label83.ForeColor = System.Drawing.Color.White;
             this.label83.Location = new System.Drawing.Point(119, 489);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(202, 46);
+            this.label83.Size = new System.Drawing.Size(203, 46);
             this.label83.TabIndex = 38;
             this.label83.Text = "Стоимость Заказа :";
             // 
@@ -200,7 +200,7 @@
             this.label82.ForeColor = System.Drawing.Color.White;
             this.label82.Location = new System.Drawing.Point(46, 451);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(276, 46);
+            this.label82.Size = new System.Drawing.Size(277, 46);
             this.label82.TabIndex = 37;
             this.label82.Text = "Дата Выполнения Заказа :";
             // 
@@ -211,7 +211,7 @@
             this.label81.ForeColor = System.Drawing.Color.White;
             this.label81.Location = new System.Drawing.Point(66, 410);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(254, 46);
+            this.label81.Size = new System.Drawing.Size(256, 46);
             this.label81.TabIndex = 36;
             this.label81.Text = "Отметка О Выполнении :";
             // 
@@ -222,7 +222,7 @@
             this.label80.ForeColor = System.Drawing.Color.White;
             this.label80.Location = new System.Drawing.Point(73, 370);
             this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(247, 46);
+            this.label80.Size = new System.Drawing.Size(249, 46);
             this.label80.TabIndex = 35;
             this.label80.Text = "Дата Принятия Заказа :";
             // 
@@ -233,7 +233,7 @@
             this.label79.ForeColor = System.Drawing.Color.White;
             this.label79.Location = new System.Drawing.Point(36, 332);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(282, 46);
+            this.label79.Size = new System.Drawing.Size(286, 46);
             this.label79.TabIndex = 34;
             this.label79.Text = "ID Сведения о типографии :";
             // 
@@ -244,7 +244,7 @@
             this.label78.ForeColor = System.Drawing.Color.White;
             this.label78.Location = new System.Drawing.Point(66, 291);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(252, 46);
+            this.label78.Size = new System.Drawing.Size(256, 46);
             this.label78.TabIndex = 33;
             this.label78.Text = "ID Сведения о издании :";
             // 
@@ -255,7 +255,7 @@
             this.label77.ForeColor = System.Drawing.Color.White;
             this.label77.Location = new System.Drawing.Point(21, 250);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(297, 46);
+            this.label77.Size = new System.Drawing.Size(301, 46);
             this.label77.TabIndex = 32;
             this.label77.Text = "ID Тип Печатной Продукции :";
             // 
@@ -266,7 +266,7 @@
             this.label76.ForeColor = System.Drawing.Color.White;
             this.label76.Location = new System.Drawing.Point(126, 210);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(194, 46);
+            this.label76.Size = new System.Drawing.Size(196, 46);
             this.label76.TabIndex = 31;
             this.label76.Text = "ID Тип Заказчика :";
             // 
@@ -277,7 +277,7 @@
             this.label75.ForeColor = System.Drawing.Color.White;
             this.label75.Location = new System.Drawing.Point(77, 170);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(244, 46);
+            this.label75.Size = new System.Drawing.Size(246, 46);
             this.label75.TabIndex = 30;
             this.label75.Text = "ID Бухгалтерский Учет :";
             // 

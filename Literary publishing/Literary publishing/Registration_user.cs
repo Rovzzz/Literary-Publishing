@@ -15,7 +15,7 @@ namespace Literary_publishing
 {
     public partial class Registration_user : Form
     {
-    DataBase dataBase = new DataBase();
+        DataBase dataBase = new DataBase();
         public Registration_user()
         {
             InitializeComponent();
@@ -29,6 +29,7 @@ namespace Literary_publishing
 
         private void bCreate_Click(object sender, EventArgs e)
         {
+
             if (checkUser())
 
             {
@@ -37,22 +38,21 @@ namespace Literary_publishing
 
             var login = textBox_login2.Text;
             var password = textBox_password2.Text;
-
             string querystring = $"insert into register(login_user,password_user) values('{login}','{password}')";
-
-            SqlCommand sqlCommand = new SqlCommand(querystring,dataBase.GetConnection());
+            SqlCommand sqlCommand = new SqlCommand(querystring, dataBase.GetConnection());
             dataBase.openConnection();
-            string path = "X:\\Literary publishing\\Debug\\User_action.txt";
-            //StreamWriter path = new StreamWriter("X:\\Literary publishing\\Debug\\User_action.txt");
-            using (StreamWriter writer = new StreamWriter(path, true))
+
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
             {
-                DateTime now = DateTime.Now;
-                writer.WriteLineAsync($"Debug: {now.ToString("F")}");
                 if (sqlCommand.ExecuteNonQuery() == 1)
                 {
                     Debug.Indent();
-                    writer.WriteLineAsync("Аккаунт Успешно Создан");
                     Debug.WriteLine("Аккаунт Успешно Создан");
+                    fileStream.WriteLine(DateTime.Now);
+                    fileStream.WriteLine("Аккаунт Успешно Создан");
+                    fileStream.Close();
                     MessageBox.Show("Аккаунт Успешно Создан", "Аккаунт Создан!");
                     Authorization_user authorization_User = new Authorization_user();
                     this.Hide();
@@ -61,14 +61,16 @@ namespace Literary_publishing
                 else
                 {
                     Debug.Indent();
-                    writer.WriteLineAsync("Аккаунт не создан");
                     Debug.WriteLine("Аккаунт не создан");
                     MessageBox.Show("Аккаунт не создан");
+                    fileStream.WriteLine(DateTime.Now);
+                    fileStream.WriteLine("Аккаунт не создан");
+                    fileStream.Close();
                 }
-                
+                dataBase.closeConnection();
             }
-            dataBase.closeConnection();
         }
+
 
               
 
@@ -84,14 +86,24 @@ namespace Literary_publishing
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
-            if (table.Rows.Count>0)
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
             {
-                MessageBox.Show("Пользователь уже существует!");
-                return true;
-            }
-            else
-            {
-                return false;
+                if (table.Rows.Count > 0)
+                {
+                    Debug.Indent();
+                    fileStream.WriteLine(DateTime.Now);
+                    fileStream.WriteLine("Пользователь уже существует!");
+                    fileStream.Close();
+                    Debug.WriteLine("Пользователь уже существует!");
+                    MessageBox.Show("Пользователь уже существует!");
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
         }
 

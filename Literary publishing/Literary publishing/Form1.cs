@@ -153,7 +153,7 @@ namespace Literary_publishing
 
         private void ReadSingleRow5(DataGridView dgw, IDataRecord record)
         {
-            dgw.Rows.Add(record.GetInt32(0), record.GetString(1), record.GetString(2), record.GetString(3), record.GetString(4), record.GetString(4), RowState.ModifiedNew);
+            dgw.Rows.Add(record.GetInt32(0), record.GetString(1), record.GetString(2), record.GetString(3), record.GetString(4), record.GetString(5), RowState.ModifiedNew);
         }
 
         private void ReadSingleRow4(DataGridView dgw, IDataRecord record)
@@ -1048,9 +1048,17 @@ namespace Literary_publishing
         }
         private void button9_Save_Click(object sender, EventArgs e)
         {
-            Save9();
-            Debug.Indent();
-            Debug.WriteLine("Нажата кнопка - Сохранить запись в форме - Типы Заказчиков");
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                Save9();
+                Debug.Indent();
+                Debug.WriteLine("Нажата кнопка - Сохранить запись в форме - Типы Заказчиков");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись сохранена - Типы Заказчиков");
+                fileStream.Close();
+            }
         }
 
         private void Change9()
@@ -1087,10 +1095,18 @@ namespace Literary_publishing
 
         private void button9_Delete_Click(object sender, EventArgs e)
         {
-            DeleteRow9();
-            ClearFields9();
-            Debug.Indent();
-            Debug.WriteLine("Нажата кнопка - Удалить запись в форме - Типы Заказчиков");
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                DeleteRow9();
+                ClearFields9();
+                Debug.Indent();
+                Debug.WriteLine("Нажата кнопка - Удалить запись в форме - Типы Заказчиков");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись удалена - Типы Заказчиков");
+                fileStream.Close();
+            }
         }
 
         private void button9_NewEntry_Click(object sender, EventArgs e)
@@ -1744,9 +1760,17 @@ namespace Literary_publishing
         }
         private void button8_Save_Click(object sender, EventArgs e)
         {
-            Save8();
-            Debug.Indent();
-            Debug.WriteLine("Нажата кнопка - Сохранить запись в форме - Тип Печатной Продукции");
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                Save8();
+                Debug.Indent();
+                Debug.WriteLine("Нажата кнопка - Сохранить запись в форме - Тип Печатной Продукции");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись сохранена - Тип Печатной Продукции");
+                fileStream.Close();
+            }
         }
 
         private void Change8()
@@ -1783,10 +1807,18 @@ namespace Literary_publishing
 
         private void button8_Delete_Click(object sender, EventArgs e)
         {
-            DeleteRow8();
-            ClearFields8();
-            Debug.Indent();
-            Debug.WriteLine("Нажата кнопка - Удалить запись в форме - Тип Печатной Продукции");
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                DeleteRow8();
+                ClearFields8();
+                Debug.Indent();
+                Debug.WriteLine("Нажата кнопка - Удалить запись в форме - Тип Печатной Продукции");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись удалена - Тип Печатной Продукции");
+                fileStream.Close();
+            }
         }
 
         private void button8_NewEntry_Click(object sender, EventArgs e)
@@ -1838,9 +1870,17 @@ namespace Literary_publishing
         }
         private void button7_Save_Click(object sender, EventArgs e)
         {
-            Save7();
-            Debug.Indent();
-            Debug.WriteLine("Нажата кнопка - Сохранить запись в форме - Адреса");
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                Save7();
+                Debug.Indent();
+                Debug.WriteLine("Нажата кнопка - Сохранить запись в форме - Адреса");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись сохранена - Адреса");
+                fileStream.Close();
+            }
         }
 
         private void Change7()
@@ -1879,10 +1919,18 @@ namespace Literary_publishing
         }
         private void button7_Delete_Click(object sender, EventArgs e)
         {
-            DeleteRow7();
-            ClearFields7();
-            Debug.Indent();
-            Debug.WriteLine("Нажата кнопка - Удалить запись в форме - Адреса");
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                DeleteRow7();
+                ClearFields7();
+                Debug.Indent();
+                Debug.WriteLine("Нажата кнопка - Удалить запись в форме - Адреса");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись удалена - Адреса");
+                fileStream.Close();
+            }
         }
 
         private void button7_NewEntry_Click(object sender, EventArgs e)
@@ -1934,9 +1982,17 @@ namespace Literary_publishing
         }
         private void button6_Save_Click(object sender, EventArgs e)
         {
-            Save6();
-            Debug.Indent();
-            Debug.WriteLine("Нажата кнопка - Сохранить запись в форме - Сведения об Типографии");
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                Save6();
+                Debug.Indent();
+                Debug.WriteLine("Нажата кнопка - Сохранить запись в форме - Сведения об Типографии");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись сохранена - Сведения об Типографии");
+                fileStream.Close();
+            }
         }
 
         private void Change6()
@@ -1982,10 +2038,18 @@ namespace Literary_publishing
         }
         private void button6_Delete_Click(object sender, EventArgs e)
         {
-            DeleteRow6();
-            ClearFields6();
-            Debug.Indent();
-            Debug.WriteLine("Нажата кнопка - Удалить запись в форме - Сведения об Типографии");
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                DeleteRow6();
+                ClearFields6();
+                Debug.Indent();
+                Debug.WriteLine("Нажата кнопка - Удалить запись в форме - Сведения об Типографии");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись удалена - Сведения об Типографии");
+                fileStream.Close();
+            }
         }
 
         private void button6_NewEntry_Click(object sender, EventArgs e)
@@ -2038,9 +2102,17 @@ namespace Literary_publishing
         }
         private void button5_Save_Click(object sender, EventArgs e)
         {
-            Save5();
-            Debug.Indent();
-            Debug.WriteLine("Нажата кнопка - Сохранить запись в форме - Сведения об Авторах");
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                Save5();
+                Debug.Indent();
+                Debug.WriteLine("Нажата кнопка - Сохранить запись в форме - Сведения об Авторах");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись сохранена - Сведения об Авторах");
+                fileStream.Close();
+            }
         }
 
         private void Change5()
@@ -2081,10 +2153,19 @@ namespace Literary_publishing
         }
         private void button5_Delete_Click(object sender, EventArgs e)
         {
-            DeleteRow5();
-            ClearFields5();
-            Debug.Indent();
-            Debug.WriteLine("Нажата кнопка - Удалить запись в форме - Сведения об Авторах");
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+
+                DeleteRow5();
+                ClearFields5();
+                Debug.Indent();
+                Debug.WriteLine("Нажата кнопка - Удалить запись в форме - Сведения об Авторах");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись удалена - Сведения об Авторах");
+                fileStream.Close();
+            }
         }
 
         private void button5_NewEntry_Click(object sender, EventArgs e)
@@ -2136,9 +2217,18 @@ namespace Literary_publishing
         }
         private void button4_Save_Click(object sender, EventArgs e)
         {
-            Save4();
-            Debug.Indent();
-            Debug.WriteLine("Нажата кнопка - Сохранить запись в форме - Сведения о Издании");
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                Save4();
+                Debug.Indent();
+                Debug.WriteLine("Нажата кнопка - Сохранить запись в форме - Сведения о Издании");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись сохранена - Сведения о Издании");
+                fileStream.Close();
+            }
+
         }
 
         private void Change4()
@@ -2192,10 +2282,18 @@ namespace Literary_publishing
         }
         private void button4_Delete_Click(object sender, EventArgs e)
         {
-            DeleteRow4();
-            ClearFields4();
-            Debug.Indent();
-            Debug.WriteLine("Нажата кнопка - Удалить запись в форме - Сведения о Издании");
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                DeleteRow4();
+                ClearFields4();
+                Debug.Indent();
+                Debug.WriteLine("Нажата кнопка - Удалить запись в форме - Сведения о Издании");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись Удалена - Сведения о Издании");
+                fileStream.Close();
+            }
         }
 
         private void button4_NewEntry_Click(object sender, EventArgs e)
@@ -2255,9 +2353,17 @@ namespace Literary_publishing
         }
         private void button3_Save_Click(object sender, EventArgs e)
         {
-            Save3();
-            Debug.Indent();
-            Debug.WriteLine("Нажата кнопка - Сохранить запись в форме - Бухгалтерский Учет");
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                Save3();
+                Debug.Indent();
+                Debug.WriteLine("Нажата кнопка - Сохранить запись в форме - Бухгалтерский Учет");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Сохранена запись - Бухгалтерский Учет");
+                fileStream.Close();
+            }
         }
 
         private void Change3()
@@ -2305,10 +2411,18 @@ namespace Literary_publishing
         }
         private void button3_Delete_Click(object sender, EventArgs e)
         {
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
             DeleteRow3();
             ClearFields3();
             Debug.Indent();
             Debug.WriteLine("Нажата кнопка - Удалить запись в форме - Бухгалтерский Учет");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись удалена - Бухгалтерский Учет");
+                fileStream.Close();
+            }
         }
 
         private void button3_NewEntry_Click(object sender, EventArgs e)
@@ -2363,9 +2477,17 @@ namespace Literary_publishing
         }
         private void button2_Save_Click(object sender, EventArgs e)
         {
-            Save2();
-            Debug.Indent();
-            Debug.WriteLine("Нажата кнопка - Сохранить в форме - Сведения о Заказчиках");
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                Save2();
+                Debug.Indent();
+                Debug.WriteLine("Нажата кнопка - Сохранить в форме - Сведения о Заказчиках");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись сохранена - Сведения о Заказчиках");
+                fileStream.Close();
+            }
         }
 
         private void Change2()
@@ -2419,10 +2541,18 @@ namespace Literary_publishing
         }
         private void button2_Delete_Click(object sender, EventArgs e)
         {
-            Debug.Indent();
-            Debug.WriteLine("Нажата кнопка - Удалить запись в форме - Сведения о Заказчиках");
-            DeleteRow2();
-            ClearFields2();
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                Debug.Indent();
+                Debug.WriteLine("Нажата кнопка - Удалить запись в форме - Сведения о Заказчиках");
+                DeleteRow2();
+                ClearFields2();
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись Удалена - Сведения о Заказчиках");
+                fileStream.Close();
+            }
         }
 
         private void button2_NewEntry_Click(object sender, EventArgs e)
@@ -2479,9 +2609,17 @@ namespace Literary_publishing
         }
         private void button1_Save_Click(object sender, EventArgs e)
         {
-            Save1();
-            Debug.Indent();
-            Debug.WriteLine("Нажата кнопка - Сохранить в форме - Сведения о заказах");
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                Save1();
+                Debug.Indent();
+                Debug.WriteLine("Нажата кнопка - Сохранить в форме - Сведения о заказах");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись сохранена - Сведения о заказах");
+                fileStream.Close();
+            }
         }
 
         private void Change1()
@@ -2550,10 +2688,18 @@ namespace Literary_publishing
         }
         private void button1_Delete_Click(object sender, EventArgs e)
         {
-            DeleteRow1();
-            ClearFields1();
-            Debug.Indent();
-            Debug.WriteLine("Нажата кнопка - Удалить запись в форме - Сведения о заказах");
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                DeleteRow1();
+                ClearFields1();
+                Debug.Indent();
+                Debug.WriteLine("Нажата кнопка - Удалить запись в форме - Сведения о заказах");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись удалена - Сведения о заказах");
+                fileStream.Close();
+            }
         }
 
         private void button1_NewEntry_Click(object sender, EventArgs e)

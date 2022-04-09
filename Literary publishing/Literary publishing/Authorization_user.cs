@@ -15,6 +15,7 @@ namespace Literary_publishing
     public partial class Authorization_user : Form
     {
         DataBase dataBase = new DataBase();
+        
         public Authorization_user()
         {
             InitializeComponent();
@@ -45,33 +46,34 @@ namespace Literary_publishing
             string querstring = $"select id_user, login_user, password_user from register where login_user = '{loginUser}' and password_user = '{passwordUser}' ";
 
             SqlCommand command = new SqlCommand(querstring, dataBase.GetConnection());
-
             adapter.SelectCommand = command;
             adapter.Fill(table);
-            string path = "X:\\Literary publishing\\Debug\\User_action.txt";
-            using (StreamWriter writer = new StreamWriter(path, true))
+
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
             {
-                DateTime now = DateTime.Now;
-                writer.WriteLineAsync($"Debug: {now.ToString("F")}");
-                    if (table.Rows.Count == 1)
-                    {
-                        Debug.Indent();
-
-                        writer.WriteLineAsync("Вы успешно вошли!");
-                        Debug.WriteLine("Вы успешно вошли!");
-                        MessageBox.Show("Вы успешно вошли!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        load load = new load();
-                        this.Hide();
-                        load.ShowDialog();
-
-                    }
-                    else
-                    {
-                        writer.WriteLineAsync("Такого аккаунта не существует!");
-                        Debug.Indent();
-                        Debug.WriteLine("Такого аккаунта не существует!");
-                        MessageBox.Show("Такого аккаунта не существует!", "Аккаунта не существует", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                if (table.Rows.Count == 1)
+                {
+                    Debug.Indent();
+                    Debug.WriteLine("Вы успешно вошли!");
+                    fileStream.WriteLine(DateTime.Now);
+                    fileStream.WriteLine("Вы успешно вошли!");
+                    fileStream.Close();
+                    MessageBox.Show("Вы успешно вошли!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    load load = new load();
+                    this.Hide();
+                    load.ShowDialog();
+                }
+                else
+                {
+                    Debug.Indent();
+                    Debug.WriteLine("Такого аккаунта не существует!");
+                    fileStream.WriteLine(DateTime.Now);
+                    fileStream.WriteLine("Такого аккаунта не существует!");
+                    fileStream.Close();
+                    MessageBox.Show("Такого аккаунта не существует!", "Аккаунта не существует", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
     

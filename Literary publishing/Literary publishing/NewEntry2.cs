@@ -48,27 +48,56 @@ namespace Literary_publishing
             int id_Address;
             var Phone_number = textBox2_Phone_number.Text;
             var Mail = textBox2_Mail.Text;
-            if (int.TryParse(textBox2_id_Customer_type.Text, out id_Customer_type) && int.TryParse(textBox2_id_Address.Text, out id_Address))
-            {
-                var addquery = $"insert into Infomation_about_Customers (id_Customer_type,Surname,Name,Patronymic,id_Address,Phone_number,Mail) values ('{id_Customer_type}','{Surname}','{Name}','{Patronymic}','{id_Address}','{Phone_number}','{Mail}')";
-                var command = new SqlCommand(addquery, dataBase.GetConnection());
-                command.ExecuteNonQuery();
-                MessageBox.Show("Запись успешно создана!", "Запись записана", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (!int.TryParse(textBox2_id_Customer_type.Text, out id_Customer_type))
-            {
-                MessageBox.Show("ID Тип Заказчика должен быть числовым форматом", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (!int.TryParse(textBox2_id_Address.Text, out id_Address))
-            {
-                MessageBox.Show("ID Адреса должен быть числовым форматом", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
 
-            dataBase.closeConnection();
 
-            Debug.Indent();
-            Debug.WriteLine("Запись Сохранена - Сведения О Заказчиках");
+                if (int.TryParse(textBox2_id_Customer_type.Text, out id_Customer_type) && int.TryParse(textBox2_id_Address.Text, out id_Address))
+                {
+                    var addquery = $"insert into Information_about_Customers (id_Customer_type,Surname,Name,Patronymic,id_Address,Phone_number,Mail) values ('{id_Customer_type}','{Surname}','{Name}','{Patronymic}','{id_Address}','{Phone_number}','{Mail}')";
+                    var command = new SqlCommand(addquery, dataBase.GetConnection());
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Запись успешно создана!", "Запись записана", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+                string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+                using (StreamWriter fileStream = new StreamWriter(path, true))
+                {
+                    fileStream.WriteLine(DateTime.Now);
+                    fileStream.WriteLine("Запись успешно создана - Сведения О Заказчиках");
+                    fileStream.Close();
+                }
+                }
+                else if (!int.TryParse(textBox2_id_Customer_type.Text, out id_Customer_type))
+                {
+                    MessageBox.Show("ID Тип Заказчика должен быть числовым форматом", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+                string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+                using (StreamWriter fileStream = new StreamWriter(path, true))
+                {
+                    fileStream.WriteLine(DateTime.Now);
+                    fileStream.WriteLine("Неправильно введены данные в (ID Тип Заказчика) - Сведения О Заказчиках");
+                    fileStream.Close();
+                }
+                }
+                else if (!int.TryParse(textBox2_id_Address.Text, out id_Address))
+                {
+                    MessageBox.Show("ID Адреса должен быть числовым форматом", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+                string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+                using (StreamWriter fileStream = new StreamWriter(path, true))
+                {
+                    fileStream.WriteLine(DateTime.Now);
+                    fileStream.WriteLine("Неправильно введены данные в (ID Адреса) - Сведения О Заказчиках");
+                    fileStream.Close();
+                }
+                }
+
+                dataBase.closeConnection();
+
+                Debug.Indent();
+                Debug.WriteLine("Запись Сохранена - Сведения О Заказчиках");
+            
         }
 
         private void textBox2_id_Customer_type_TextChanged(object sender, EventArgs e)

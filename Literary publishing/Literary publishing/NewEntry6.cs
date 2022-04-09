@@ -30,25 +30,44 @@ namespace Literary_publishing
         private void button2_save_Click(object sender, EventArgs e)
         {
             dataBase.openConnection();
-            var title_printing_house = textBox6_title_printing_houses.Text;
-            int id_Addres;
+            var title_printing_houses = textBox6_title_printing_houses.Text;
+            int id_Address;
             var Phone_number = textBox6_Phone_number.Text;
             var Mail = textBox6_Mail.Text;
-            if (int.TryParse(textBox6_id_Address.Text, out id_Addres))
-            {
-                var addquery = $"insert into Infomation_about_printing_house (title_printing_house,id_Addres,Phone_number,Mail) values ('{title_printing_house}','{id_Addres}','{Phone_number}','{Mail}')";
-                var command = new SqlCommand(addquery, dataBase.GetConnection());
-                command.ExecuteNonQuery();
-                MessageBox.Show("Запись успешно создана!", "Запись записана", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("id адреса должно быть числовым форматом", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+
+                if (int.TryParse(textBox6_id_Address.Text, out id_Address))
+                {
+                    var addquery = $"insert into Information_about_printing_houses (title_printing_houses,id_Address,Phone_number,Mail) values ('{title_printing_houses}','{id_Address}','{Phone_number}','{Mail}')";
+                    var command = new SqlCommand(addquery, dataBase.GetConnection());
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Запись успешно создана!", "Запись записана", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+                string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+                using (StreamWriter fileStream = new StreamWriter(path, true))
+                {
+                    fileStream.WriteLine(DateTime.Now);
+                    fileStream.WriteLine("Запись успешно создана - Сведения О Типографии");
+                    fileStream.Close();
+                }
+                }
+                else
+                {
+                MessageBox.Show("Id адреса должно быть числовым форматом", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+                string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+                using (StreamWriter fileStream = new StreamWriter(path, true))
+                {
+                    fileStream.WriteLine(DateTime.Now);
+                    fileStream.WriteLine("Неправильно введены данные в (Id адреса) - Сведения О Типографии");
+                    fileStream.Close();
+                }
+                }
+
+                dataBase.closeConnection();
+                Debug.Indent();
+                Debug.WriteLine("Запись Сохранена - Сведения О Типографии");
             
-            dataBase.closeConnection();
-            Debug.Indent();
-            Debug.WriteLine("Запись Сохранена - Сведения О Типографии");
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

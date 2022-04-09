@@ -83,7 +83,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(110, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(290, 64);
+            this.label3.Size = new System.Drawing.Size(291, 64);
             this.label3.TabIndex = 3;
             this.label3.Text = "Бухгалтерский Учёт";
             // 
@@ -109,7 +109,7 @@
             this.label2.Location = new System.Drawing.Point(108, 9);
             this.label2.MaximumSize = new System.Drawing.Size(280, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(267, 64);
+            this.label2.Size = new System.Drawing.Size(268, 64);
             this.label2.TabIndex = 1;
             this.label2.Text = "Создание Записи:";
             // 
@@ -209,7 +209,7 @@
             this.label64.ForeColor = System.Drawing.Color.White;
             this.label64.Location = new System.Drawing.Point(320, 687);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(89, 46);
+            this.label64.Size = new System.Drawing.Size(90, 46);
             this.label64.TabIndex = 41;
             this.label64.Text = "Долги :";
             // 
@@ -242,7 +242,7 @@
             this.label61.ForeColor = System.Drawing.Color.White;
             this.label61.Location = new System.Drawing.Point(129, 549);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(280, 46);
+            this.label61.Size = new System.Drawing.Size(281, 46);
             this.label61.TabIndex = 38;
             this.label61.Text = "Расходы От Потери Брака :";
             // 
@@ -264,7 +264,7 @@
             this.label59.ForeColor = System.Drawing.Color.White;
             this.label59.Location = new System.Drawing.Point(103, 457);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(305, 46);
+            this.label59.Size = new System.Drawing.Size(307, 46);
             this.label59.TabIndex = 36;
             this.label59.Text = "Общеиздательские Расходы :";
             // 
@@ -275,7 +275,7 @@
             this.label58.ForeColor = System.Drawing.Color.White;
             this.label58.Location = new System.Drawing.Point(148, 419);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(263, 46);
+            this.label58.Size = new System.Drawing.Size(264, 46);
             this.label58.TabIndex = 35;
             this.label58.Text = "Редакционные Расходы :";
             // 
@@ -286,7 +286,7 @@
             this.label57.ForeColor = System.Drawing.Color.White;
             this.label57.Location = new System.Drawing.Point(148, 378);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(261, 46);
+            this.label57.Size = new System.Drawing.Size(262, 46);
             this.label57.TabIndex = 34;
             this.label57.Text = "Расходы На Материалы :";
             // 
@@ -298,7 +298,7 @@
             this.label56.Location = new System.Drawing.Point(131, 286);
             this.label56.MaximumSize = new System.Drawing.Size(300, 0);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(278, 92);
+            this.label56.Size = new System.Drawing.Size(281, 92);
             this.label56.TabIndex = 33;
             this.label56.Text = "Расходы На Полиграфические Работы :";
             // 
@@ -310,7 +310,7 @@
             this.label55.Location = new System.Drawing.Point(24, 202);
             this.label55.MaximumSize = new System.Drawing.Size(400, 0);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(385, 92);
+            this.label55.Size = new System.Drawing.Size(388, 92);
             this.label55.TabIndex = 32;
             this.label55.Text = "Расходы На Гонорар За Художественно  Графические Работы:";
             // 
@@ -321,7 +321,7 @@
             this.label54.ForeColor = System.Drawing.Color.White;
             this.label54.Location = new System.Drawing.Point(78, 161);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(334, 46);
+            this.label54.Size = new System.Drawing.Size(336, 46);
             this.label54.TabIndex = 31;
             this.label54.Text = "Расходы На Авторский Гонорар :";
             // 

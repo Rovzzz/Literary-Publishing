@@ -38,13 +38,24 @@ namespace Literary_publishing
         {
             dataBase.openConnection();
             var Type_of_printed_products = textBox8_Type_of_printed_products.Text;
-            var addquery = $"insert into Type_of_printed_products (Type_of_printed_products) values ('{Type_of_printed_products}')";
-            var command = new SqlCommand(addquery, dataBase.GetConnection());
-            command.ExecuteNonQuery();
-            MessageBox.Show("Запись успешно создана!", "Запись записана", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            dataBase.closeConnection();
-            Debug.Indent();
-            Debug.WriteLine("Запись Сохранена - Тип Печатной Продукции");
+                var addquery = $"insert into Type_of_printed_products (Type_of_printed_products) values ('{Type_of_printed_products}')";
+                var command = new SqlCommand(addquery, dataBase.GetConnection());
+                command.ExecuteNonQuery();
+
+            
+                MessageBox.Show("Запись успешно создана!", "Запись записана", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataBase.closeConnection();
+
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                Debug.Indent();
+                Debug.WriteLine("Запись Сохранена - Тип Печатной Продукции");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись успешно создана - Тип Печатной Продукции");
+                fileStream.Close();
+            }
         }
 
         private void button1_clear_Click(object sender, EventArgs e)

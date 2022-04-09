@@ -9,7 +9,7 @@ namespace Literary_publishing
 {
     class DataBase
     {
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source = sql; Initial Catalog = Literary publishing; Integrated Security = True");
+        SqlConnection sqlConnection = new SqlConnection(@"Data Source = zlobinovpc; Initial Catalog = Literary Publishing; Integrated Security = True");
 
         public void openConnection()
         {

@@ -55,16 +55,23 @@ namespace Literary_publishing
             var Debts = textBox3_Debts.Text;
             var Taxes = textBox3_Taxes.Text;
 
-                var addquery = $"insert into Accouting (royalties_expenses,expenses_for_the_free_for_artistic_and_graphic_works,printing_costs,material_costs,editorial_expenses,general_publishing_expenses,selling_expenses,Expenses_from_loss_defect,Basic_income,Secondary_income,Debts,Taxes) values ('{royalties_expenses}','{expenses_for_the_free_for_artistic_and_graphic_works}','{printing_costs}','{material_costs}','{editorial_expenses}','{general_publishing_expenses}','{selling_expenses}','{Expenses_from_loss_defect}','{Basic_income}','{Secondary_income}','{Debts}','{Taxes}')";
+                var addquery = $"insert into Accounting (royalties_expenses,expenses_for_the_fee_for_artistic_and_graphic_works,printing_costs,material_costs,editorial_expenses,general_publishing_expenses,selling_expenses,Expenses_from_loss_defect,Basic_income,Secondary_income,Debts,Taxes) values ('{royalties_expenses}','{expenses_for_the_free_for_artistic_and_graphic_works}','{printing_costs}','{material_costs}','{editorial_expenses}','{general_publishing_expenses}','{selling_expenses}','{Expenses_from_loss_defect}','{Basic_income}','{Secondary_income}','{Debts}','{Taxes}')";
                 var command = new SqlCommand(addquery, dataBase.GetConnection());
                 command.ExecuteNonQuery();
                 MessageBox.Show("Запись успешно создана!", "Запись записана", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись успешно создана - Бухгалтерский Учёт");
+                fileStream.Close();
+            }
+                dataBase.closeConnection();
 
-            dataBase.closeConnection();
-
-            Debug.Indent();
-            Debug.WriteLine("Запись Сохранена - Бухгалтерский Учёт");
-
+                Debug.Indent();
+                Debug.WriteLine("Запись Сохранена - Бухгалтерский Учёт");
+            
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -49,13 +49,22 @@ namespace Literary_publishing
         {
             dataBase.openConnection();
             var Customer_type = textBox9_Customer_type.Text;
-            var addquery = $"insert into Customer_type (Customer_type) values ('{Customer_type}')";
-            var command = new SqlCommand(addquery, dataBase.GetConnection());
-            command.ExecuteNonQuery();
-            MessageBox.Show("Запись успешно создана!", "Запись записана", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            dataBase.closeConnection();
-            Debug.Indent();
-            Debug.WriteLine("Запись Сохранена - Типы Заказчиков");
+                var addquery = $"insert into Customer_type (Customer_type) values ('{Customer_type}')";
+                var command = new SqlCommand(addquery, dataBase.GetConnection());
+                command.ExecuteNonQuery();
+                MessageBox.Show("Запись успешно создана!", "Запись записана", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataBase.closeConnection();
+
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            string path = "C:\\Users\\1290743\\Desktop\\Literary publishing\\Debug\\User_action.txt";
+            using (StreamWriter fileStream = new StreamWriter(path, true))
+            {
+                Debug.Indent();
+                Debug.WriteLine("Запись Сохранена - Типы Заказчиков");
+                fileStream.WriteLine(DateTime.Now);
+                fileStream.WriteLine("Запись успешно создана - Типы Заказчиков");
+                fileStream.Close();
+            }
         }
 
         private void button1_clear_Click(object sender, EventArgs e)
